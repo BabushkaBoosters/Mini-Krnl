@@ -1,0 +1,438 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KRNL = Instance.new("ScreenGui")
+local Top = Instance.new("Frame")
+local Logo = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Main = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local CodeBox = Instance.new("TextBox")
+local Comments_ = Instance.new("TextLabel")
+local Globals_ = Instance.new("TextLabel")
+local Keywords_ = Instance.new("TextLabel")
+local RemoteHighlight_ = Instance.new("TextLabel")
+local Strings_ = Instance.new("TextLabel")
+local Tokens_ = Instance.new("TextLabel")
+local Numbers_ = Instance.new("TextLabel")
+local Lines = Instance.new("TextLabel")
+local Exe = Instance.new("TextButton")
+local Inj = Instance.new("TextButton")
+local Cle = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+KRNL.Name = "KRNL"
+KRNL.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KRNL.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Top.Name = "Top"
+Top.Parent = KRNL
+Top.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Top.BorderSizePixel = 0
+Top.Position = UDim2.new(0.420777291, 0, 0.316055626, 0)
+Top.Size = UDim2.new(0, 442, 0, 23)
+
+Logo.Name = "Logo"
+Logo.Parent = Top
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.Size = UDim2.new(0, 23, 0, 32)
+Logo.Image = "rbxassetid://97053541251439"
+
+UIAspectRatioConstraint.Parent = Logo
+
+Main.Name = "Main"
+Main.Parent = Top
+Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(-0.000581907982, 0, 0.96822989, 0)
+Main.Size = UDim2.new(0, 442, 0, 249)
+
+ScrollingFrame.Parent = Main
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(61, 61, 61)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 11, 0, 11)
+ScrollingFrame.Size = UDim2.new(0, 418, 0, 202)
+ScrollingFrame.BottomImage = "rbxassetid://148970562"
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame.MidImage = "rbxassetid://148970562"
+ScrollingFrame.ScrollBarThickness = 5
+ScrollingFrame.TopImage = "rbxassetid://148970562"
+
+CodeBox.Name = "CodeBox"
+CodeBox.Parent = ScrollingFrame
+CodeBox.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+CodeBox.BackgroundTransparency = 1.000
+CodeBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+CodeBox.Position = UDim2.new(0, 30, 0, 0)
+CodeBox.Size = UDim2.new(1, 0, 1, 0)
+CodeBox.ClearTextOnFocus = false
+CodeBox.Font = Enum.Font.Code
+CodeBox.PlaceholderColor3 = Color3.fromRGB(204, 204, 204)
+CodeBox.Text = ""
+CodeBox.TextColor3 = Color3.fromRGB(204, 204, 204)
+CodeBox.TextSize = 15.000
+CodeBox.TextXAlignment = Enum.TextXAlignment.Left
+CodeBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Comments_.Name = "Comments_"
+Comments_.Parent = CodeBox
+Comments_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Comments_.BackgroundTransparency = 1.000
+Comments_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Comments_.Size = UDim2.new(1, 0, 1, 0)
+Comments_.ZIndex = 5
+Comments_.Font = Enum.Font.Code
+Comments_.Text = ""
+Comments_.TextColor3 = Color3.fromRGB(59, 200, 59)
+Comments_.TextSize = 15.000
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+
+Globals_.Name = "Globals_"
+Globals_.Parent = CodeBox
+Globals_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Globals_.BackgroundTransparency = 1.000
+Globals_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Globals_.Size = UDim2.new(1, 0, 1, 0)
+Globals_.ZIndex = 5
+Globals_.Font = Enum.Font.Code
+Globals_.Text = ""
+Globals_.TextColor3 = Color3.fromRGB(132, 214, 247)
+Globals_.TextSize = 15.000
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+
+Keywords_.Name = "Keywords_"
+Keywords_.Parent = CodeBox
+Keywords_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keywords_.BackgroundTransparency = 1.000
+Keywords_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Keywords_.Size = UDim2.new(1, 0, 1, 0)
+Keywords_.ZIndex = 5
+Keywords_.Font = Enum.Font.Code
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.fromRGB(248, 109, 124)
+Keywords_.TextSize = 15.000
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+
+RemoteHighlight_.Name = "RemoteHighlight_"
+RemoteHighlight_.Parent = CodeBox
+RemoteHighlight_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoteHighlight_.BackgroundTransparency = 1.000
+RemoteHighlight_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+RemoteHighlight_.Size = UDim2.new(1, 0, 1, 0)
+RemoteHighlight_.ZIndex = 5
+RemoteHighlight_.Font = Enum.Font.Code
+RemoteHighlight_.Text = ""
+RemoteHighlight_.TextColor3 = Color3.fromRGB(0, 144, 255)
+RemoteHighlight_.TextSize = 15.000
+RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
+RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
+
+Strings_.Name = "Strings_"
+Strings_.Parent = CodeBox
+Strings_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Strings_.BackgroundTransparency = 1.000
+Strings_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Strings_.Size = UDim2.new(1, 0, 1, 0)
+Strings_.ZIndex = 5
+Strings_.Font = Enum.Font.Code
+Strings_.Text = ""
+Strings_.TextColor3 = Color3.fromRGB(173, 241, 149)
+Strings_.TextSize = 15.000
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+
+Tokens_.Name = "Tokens_"
+Tokens_.Parent = CodeBox
+Tokens_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.BackgroundTransparency = 1.000
+Tokens_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Tokens_.Size = UDim2.new(1, 0, 1, 0)
+Tokens_.ZIndex = 5
+Tokens_.Font = Enum.Font.Code
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.TextSize = 15.000
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+
+Numbers_.Name = "Numbers_"
+Numbers_.Parent = CodeBox
+Numbers_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Numbers_.BackgroundTransparency = 1.000
+Numbers_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Numbers_.Size = UDim2.new(1, 0, 1, 0)
+Numbers_.ZIndex = 4
+Numbers_.Font = Enum.Font.Code
+Numbers_.Text = ""
+Numbers_.TextColor3 = Color3.fromRGB(255, 198, 0)
+Numbers_.TextSize = 15.000
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+
+Lines.Name = "Lines"
+Lines.Parent = ScrollingFrame
+Lines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lines.BackgroundTransparency = 1.000
+Lines.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lines.Size = UDim2.new(0, 30, 1, 0)
+Lines.ZIndex = 4
+Lines.Font = Enum.Font.Code
+Lines.Text = "1"
+Lines.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lines.TextSize = 15.000
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+
+Exe.Name = "Exe"
+Exe.Parent = Main
+Exe.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Exe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exe.BorderSizePixel = 0
+Exe.Position = UDim2.new(0.02362171, 0, 0.872950792, 0)
+Exe.Size = UDim2.new(0, 113, 0, 25)
+Exe.Font = Enum.Font.SourceSans
+Exe.Text = "EXECUTE"
+Exe.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exe.TextSize = 14.000
+Exe.TextWrapped = true
+
+Inj.Name = "Inj"
+Inj.Parent = Main
+Inj.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Inj.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Inj.BorderSizePixel = 0
+Inj.Position = UDim2.new(0.36945051, 0, 0.872950792, 0)
+Inj.Size = UDim2.new(0, 113, 0, 25)
+Inj.Font = Enum.Font.SourceSans
+Inj.Text = "INJECT"
+Inj.TextColor3 = Color3.fromRGB(255, 255, 255)
+Inj.TextSize = 14.000
+Inj.TextWrapped = true
+
+Cle.Name = "Cle"
+Cle.Parent = Main
+Cle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Cle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cle.BorderSizePixel = 0
+Cle.Position = UDim2.new(0.712696075, 0, 0.872950792, 0)
+Cle.Size = UDim2.new(0, 113, 0, 25)
+Cle.Font = Enum.Font.SourceSans
+Cle.Text = "CLEAR"
+Cle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cle.TextSize = 14.000
+Cle.TextWrapped = true
+
+TextLabel.Parent = Top
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.269902915, 0, 0.0434782617, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 22)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "KRNL"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+Exit.Name = "Exit"
+Exit.Parent = Top
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.945701361, 0, -0.0434782617, 0)
+Exit.Size = UDim2.new(0, 24, 0, 41)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "x"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextSize = 25.000
+
+UIAspectRatioConstraint_2.Parent = Exit
+
+-- Scripts:
+
+local function PAVO_fake_script() -- Top.SmoothDrag 
+	local script = Instance.new('LocalScript', Top)
+
+	local Drag = script.Parent
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+		local function update(input)
+			local delta = input.Position - dragStart
+			local dragTime = 0.04
+			local SmoothDrag = {}
+			SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+			dragSmoothFunction:Play()
+		end
+		Drag.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = Drag.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		Drag.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging and Drag.Size then
+				update(input)
+			end
+		end)
+	
+end
+coroutine.wrap(PAVO_fake_script)()
+local function NWLMIC_fake_script() -- CodeBox.LocalScript 
+	local script = Instance.new('LocalScript', CodeBox)
+
+	
+	local DB = false
+	
+	local NumLines = 1
+	
+	local newargs
+	
+	local Statements = {"while", "if", "function", "for", "repeat"}
+	
+	local Found = false
+	
+	local i = 1
+	
+	script.Parent.Parent.Lines:GetPropertyChangedSignal("Text"):Connect(function()
+		
+		i = #string.split(script.Parent.Parent.Lines.Text, "\n") - 1
+		
+	end)
+	
+	script.Parent.FocusLost:Connect(function(Enterpressed, InputObject)
+		
+		if Enterpressed and script.Parent.Text ~= nil then
+			
+			if DB == false then
+	
+				DB = true
+				
+				local lines = string.split(script.Parent.Text, '\n')
+				
+				for _, statement in pairs(Statements) do
+					
+					if string.find(lines[i], statement) then
+						
+						--print("Statement Found")
+						
+						script.Parent.Text..="\n"
+						script.Parent.Text..="   "
+						script.Parent:CaptureFocus()
+	
+						i = #string.split(script.Parent.Parent.Lines.Text, "\n") - 1
+						
+						
+						
+						Found = true
+						
+						break
+	
+					end
+					
+				end
+				
+				--print(Found)
+				
+				if Found == false then
+					
+					--print("No statement found, Going down one line")
+					
+					script.Parent.Text..="\n"
+					script.Parent:CaptureFocus()
+	
+					i = #string.split(script.Parent.Parent.Lines.Text, "\n") - 1
+					
+				end
+				
+				--print(i)
+				
+				wait(0.2)
+				
+				lines = nil
+				
+				DB = false
+				
+				Found = false
+				
+			end
+			
+		end
+		
+	end)
+end
+coroutine.wrap(NWLMIC_fake_script)()
+-- Exe.LocalScript is disabled.
+local function FHXYCA_fake_script() -- Inj.LocalScript 
+	local script = Instance.new('LocalScript', Inj)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.ReplicatedStorage:GetChildren()) do
+			if v.Name == "slice-of-ham" then
+				script.Parent.Parent.Exe.LocalScript.Enabled = true
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "KRNL";
+					Text = "Backdoor found :D";
+					Icon = "http://www.roblox.com/asset/?id=18947062026";
+					Duration = "3";
+				})
+			else
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "KRNL";
+					Text = "Backdoor not found D:";
+					Icon = "http://www.roblox.com/asset/?id=18947062026";
+					Duration = "3";
+				})
+			end
+		end
+	end)
+end
+coroutine.wrap(FHXYCA_fake_script)()
+local function MZRNB_fake_script() -- Cle.LocalScript 
+	local script = Instance.new('LocalScript', Cle)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ScrollingFrame.CodeBox.Text = ""
+	end)
+end
+coroutine.wrap(MZRNB_fake_script)()
+local function PSWEAUU_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(PSWEAUU_fake_script)()
